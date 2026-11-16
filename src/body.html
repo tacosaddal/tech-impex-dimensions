@@ -1,0 +1,251 @@
+<div id="app">
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<div id="loader" aria-hidden="true">
+  <div class="ld">
+    <div class="ld__n"><span id="ldn">000</span><small>%</small></div>
+    <div class="ld__bar"><i id="ldb"></i></div>
+    <p class="ld__m mono" id="ldm">Finding the point</p>
+  </div>
+</div>
+
+<header class="hud" id="hud">
+  <div class="hud__top wrap">
+    <a class="logo" href="#top" aria-label="Back to top">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 3l11 6.5v13L16 29 5 22.5v-13L16 3z"/><path d="M16 16L5 9.5M16 16l11-6.5M16 16v13" opacity=".55"/><circle cx="16" cy="16" r="2.4" fill="currentColor" stroke="none"/></svg>
+      <span data-studio>Tech Impex</span>
+    </a>
+    <nav class="hud__nav mono" aria-label="Main">
+      <a href="#index">Capabilities</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="snd mono" id="snd" type="button" aria-pressed="false" aria-label="Toggle sound">
+      <span class="snd__b" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="snd__t" id="sndt">Sound off</span>
+    </button>
+  </div>
+  <nav class="gauge mono" id="gauge" aria-label="Dimensions">
+    <button type="button" data-jump="0" class="is-on" aria-label="0D, the point">0D</button>
+    <button type="button" data-jump="1.75" aria-label="1D, the line">1D</button>
+    <button type="button" data-jump="4.1" aria-label="2D, the surface">2D</button>
+    <button type="button" data-jump="9.4" aria-label="3D, the world">3D</button>
+    <button type="button" data-jump="12.2" aria-label="XR, beyond the screen">XR</button>
+  </nav>
+  <div class="hud__bot wrap mono" id="hudbot">
+    <div class="hud__sec"><b id="hudk">0D</b><span id="hudn">The point</span></div>
+    <div class="hud__pct"><span class="hud__scroll">Scroll</span><span id="hudp">000</span><i aria-hidden="true"></i></div>
+  </div>
+</header>
+<div class="spec" id="spec" aria-hidden="true"></div>
+
+<main id="top">
+<section id="journey" aria-label="What we build, one dimension at a time">
+  <div class="stage" id="stage">
+
+    <div class="ch ch--hero" data-ch="hero">
+      <div class="wrap hero">
+        <p class="eyebrow mono rv" style="--i:0">Software house <b>/</b> games, XR and business systems</p>
+        <h1 class="hero__t">
+          <span class="ln"><span class="rv" style="--i:1">Software</span></span>
+          <span class="ln"><span class="rv" style="--i:2">in every</span></span>
+          <span class="ln"><span class="rv" style="--i:3"><em>dimension.</em></span></span>
+        </h1>
+        <div class="hero__row">
+          <p class="lede rv" style="--i:5">From the systems that run a business to the worlds people step into. One studio builds all of it. Scroll, and each dimension proves itself.</p>
+          <div class="row rv" style="--i:6">
+            <button class="btn btn--fill" type="button" data-jump="1.75" data-cursor="Go">Start the journey <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 1v12M2 8l5 5 5-5"/></svg></button>
+            <a class="btn" href="#work">Skip to the work</a>
+          </div>
+        </div>
+        <aside class="note mono rv" style="--i:8"><span><b>0D</b> &nbsp;The point</span><p>Every product starts as a single point: an idea.</p></aside>
+      </div>
+    </div>
+
+    <div class="ch ch--d1" data-ch="d1">
+      <div class="wrap chb">
+        <p class="dim mono rv" style="--i:0"><b>1D</b><span>The line</span></p>
+        <h2 class="cht">
+          <span class="ln"><span class="rv" style="--i:1">It starts with</span></span>
+          <span class="ln"><span class="rv" style="--i:2"><em>a line.</em></span></span>
+        </h2>
+        <p class="chp rv" style="--i:4">Then a few hundred thousand more. Tested, documented, and written so your own team can run it long after launch.</p>
+        <pre class="code rv" style="--i:5" aria-label="How a project runs"><i>01</i><b>const</b> brief   = <u>listen</u>(you)
+<i>02</i><b>const</b> plan    = <u>design</u>(brief)
+<i>03</i><b>const</b> product = <u>build</u>(plan, { tests: <b>true</b> })
+<i>04</i><b>await</b> <u>ship</u>(product)  <i>// then keep improving</i></pre>
+      </div>
+    </div>
+
+    <div class="ch ch--d2" data-ch="d2">
+      <div class="wrap chb">
+        <p class="dim mono rv" style="--i:0"><b>2D</b><span>The surface</span></p>
+        <h2 class="cht">
+          <span class="ln"><span class="rv" style="--i:1">Lines become</span></span>
+          <span class="ln"><span class="rv" style="--i:2"><em>interfaces.</em></span></span>
+        </h2>
+        <ul class="svc rv" id="svc" style="--i:4">
+          <li><button type="button" data-svc="0">Web apps</button></li>
+          <li><button type="button" data-svc="1">Mobile apps</button></li>
+          <li><button type="button" data-svc="2">Internal management systems</button></li>
+          <li><button type="button" data-svc="3">CRM platforms</button></li>
+          <li><button type="button" data-svc="4">Sales management systems</button></li>
+          <li><button type="button" data-svc="5">Data analytics dashboards</button></li>
+        </ul>
+        <p class="svc__d rv" id="svcd" style="--i:5" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="ch ch--demo" data-ch="demo">
+      <div class="wrap demo">
+        <div class="demo__head">
+          <p class="dim mono rv" style="--i:0"><b>2D</b><span>Live demo</span></p>
+          <h2 class="cht cht--s">
+            <span class="ln"><span class="rv" style="--i:1">Don't take our word.</span></span>
+            <span class="ln"><span class="rv" style="--i:2"><em>Drag a deal.</em></span></span>
+          </h2>
+          <p class="chp rv" style="--i:3">A working slice of a sales system, running in this page. Move a deal to Won and the totals, the chart and the phone all update together.</p>
+        </div>
+        <div class="demo__stage rv" style="--i:4" id="demo"></div>
+      </div>
+    </div>
+
+    <div class="ch ch--d3" data-ch="d3">
+      <div class="wrap chb">
+        <p class="dim mono rv" style="--i:0"><b>3D</b><span>The world</span></p>
+        <h2 class="cht">
+          <span class="ln"><span class="rv" style="--i:1">Add depth,</span></span>
+          <span class="ln"><span class="rv" style="--i:2">get <em>a world.</em></span></span>
+        </h2>
+        <p class="chp rv" style="--i:4">Game development for PC, console, mobile and the browser you are in right now. Gameplay, physics, multiplayer and shaders.<span id="pstat"> This page is live too: <b id="pcount"></b> particles, no video.</span></p>
+        <div class="row rv" style="--i:5">
+          <button class="btn btn--fill" id="gplay" type="button" data-cursor="Play">Play the 30-second demo</button>
+          <span class="keys mono"><kbd>&larr;</kbd><kbd>&rarr;</kbd> or move the pointer</span>
+        </div>
+      </div>
+      <div class="ghud" id="ghud" hidden>
+        <div class="ghud__top mono">
+          <div><small>Score</small><b id="gscore">0</b></div>
+          <div><small>Time</small><b id="gtime">30.0</b></div>
+          <div><small>Shields</small><span class="lives" id="glives"><i></i><i></i><i></i></span></div>
+        </div>
+        <div class="ghud__msg" id="gmsg" aria-live="assertive"></div>
+        <div class="ghud__over" id="gover" hidden>
+          <p class="mono" id="gwhy">Run complete</p>
+          <b id="gfinal">0</b>
+          <p class="mono" id="gbest">Best 0</p>
+          <div class="row" style="justify-content:center;margin-top:10px">
+            <button class="btn btn--fill" id="gagain" type="button">Play again</button>
+            <button class="btn" id="gexit" type="button">Keep scrolling</button>
+          </div>
+        </div>
+        <button class="ghud__x mono" id="gquit" type="button">Quit</button>
+      </div>
+    </div>
+
+    <div class="ch ch--ar" data-ch="ar" data-cursor="Place">
+      <div class="arf mono" aria-hidden="true"><i></i><i></i><i></i><i></i><span>Surface detected</span></div>
+      <div class="artag mono" id="artag" aria-hidden="true"></div>
+      <div class="wrap chb">
+        <p class="dim mono rv" style="--i:0"><b>XR</b><span>Augmented reality</span></p>
+        <h2 class="cht">
+          <span class="ln"><span class="rv" style="--i:1">Then bring it</span></span>
+          <span class="ln"><span class="rv" style="--i:2">into <em>the room.</em></span></span>
+        </h2>
+        <p class="chp rv" style="--i:4">Product visualisers, on-site overlays and guided training, anchored to real surfaces.</p>
+        <div class="arui rv" style="--i:5">
+          <span class="hint mono">Click the floor to place</span>
+          <div class="seg" role="group" aria-label="Object to place" id="arobj">
+            <button type="button" data-obj="0" class="is-on">Chair</button>
+            <button type="button" data-obj="1">Table</button>
+            <button type="button" data-obj="2">Lamp</button>
+            <button type="button" data-obj="3">Plant</button>
+          </div>
+          <button class="lnk mono" type="button" id="arclear">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ch ch--vr" data-ch="vr" data-cursor="Drag">
+      <div class="eyes mono" aria-hidden="true"><span>Left eye</span><span>Right eye</span></div>
+      <div class="wrap chb">
+        <p class="dim mono rv" style="--i:0"><b>XR</b><span>Virtual reality</span></p>
+        <h2 class="cht">
+          <span class="ln"><span class="rv" style="--i:1">Or step</span></span>
+          <span class="ln"><span class="rv" style="--i:2"><em>inside it.</em></span></span>
+        </h2>
+        <p class="chp rv" style="--i:4">Training simulators, virtual showrooms and experiences built for headsets. Drag to look around.</p>
+      </div>
+    </div>
+
+    <div class="ch ch--mr" data-ch="mr" data-cursor="Drag">
+      <div class="wrap chb">
+        <p class="dim mono rv" style="--i:0"><b>XR</b><span>Mixed reality</span></p>
+        <h2 class="cht">
+          <span class="ln"><span class="rv" style="--i:1">Or have</span></span>
+          <span class="ln"><span class="rv" style="--i:2"><em>both at once.</em></span></span>
+        </h2>
+        <p class="chp rv" style="--i:4">Spatial apps that pin your dashboards to the wall and your products to the floor. Drag to look around the room.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="index" class="sec" aria-labelledby="index-h">
+  <div class="wrap">
+    <header class="sec__h">
+      <p class="mono eyebrow">Capabilities</p>
+      <h2 id="index-h">Ten things we build, <em>one team.</em></h2>
+    </header>
+    <ol class="caps" id="caps"></ol>
+  </div>
+</section>
+
+<section id="work" class="sec sec--work" aria-labelledby="work-h">
+  <div class="work">
+    <header class="sec__h wrap">
+      <div>
+        <p class="mono eyebrow">Selected work <span class="chip">sample projects</span></p>
+        <h2 id="work-h">Proof, in <em>every dimension.</em></h2>
+      </div>
+      <p class="mono work__hint">Keep scrolling &rarr;</p>
+    </header>
+    <div class="track" id="track"></div>
+  </div>
+</section>
+
+<section id="contact" class="sec sec--contact" aria-labelledby="contact-h">
+  <div class="wrap contact">
+    <p class="mono eyebrow">Start a project</p>
+    <h2 id="contact-h">Every project starts as <em>a single point.</em> What's yours?</h2>
+    <div class="contact__r">
+      <button class="mail" id="mail" type="button" data-cursor="Copy"><b id="mailt">hello@your-domain.com</b><small class="mono" id="mails">Click to copy</small></button>
+      <ul class="contact__l">
+        <li><small class="mono">New business</small>[Phone number]</li>
+        <li><small class="mono">Studio</small>[City], United Kingdom</li>
+        <li><small class="mono">Reply time</small>Within one working day</li>
+        <li><small class="mono">Local time</small><span id="clock">00:00</span></li>
+      </ul>
+    </div>
+    <footer class="foot mono">
+      <span>&copy; <span id="yr">2026</span> <span data-studio>Tech Impex</span> Ltd</span>
+      <ul><li>LinkedIn</li><li>Instagram</li><li>GitHub</li></ul>
+      <a href="#top">Back to the point &uarr;</a>
+    </footer>
+  </div>
+</section>
+</main>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-t">
+  <div class="modal__p" id="modalp" data-scrollable>
+    <button class="modal__x mono" id="modalx" type="button">Close</button>
+    <div class="modal__c" id="modalc"></div>
+    <p class="mono" id="modal-k" style="color:var(--ink-2)"></p>
+    <h3 id="modal-t"></h3>
+    <dl class="mono" id="modal-d"></dl>
+    <div class="modal__b" id="modal-b"></div>
+  </div>
+</div>
+
+<div class="cur" id="cur" aria-hidden="true"><div class="cur__r"><span id="curt"></span></div><div class="cur__d"></div></div>
+</div>
